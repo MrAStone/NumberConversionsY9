@@ -24,7 +24,19 @@ namespace NumberConversionsY9
             }
             Console.WriteLine(binNum);
 
-
+            string binNumToConvert;
+            Console.Write("Enter Binary number: ");
+            binNumToConvert = Console.ReadLine();
+            int result = 0;
+            int mult = 1;
+            for(int i = binNumToConvert.Length - 1; i >= 0; i--)
+            {
+                int curVal = Convert.ToInt32(binNumToConvert[i]-48);
+                result += mult * curVal;
+              
+                mult *= 2;
+            }
+            Console.WriteLine(result);
         }
     }
 }
